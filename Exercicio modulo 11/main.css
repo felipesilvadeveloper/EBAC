@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: roboto, sans-serif;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background-color: rgb(78, 32, 150);
+    color: #fff;
+    padding: 8px 0;
+    margin-bottom: 40px;
+}
+
+.menu li {
+    float: left;
+    padding: 8px;
+    list-style: none;
+}
+
+.menu li a {
+    font-weight: bold;
+    color: inherit; 
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: #ccc;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    
+}
+
+.coluna-imagem img {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+aside {
+    padding-left: 40px;
+}
+
+section {
+    padding-bottom: 40px;
+}
+
+section h2 {
+    font-style: italic;
+    color: rgb(78, 32, 150);
+    border-bottom: 2px solid rgb(78, 32, 150);
+    margin-bottom: 16px;
+    padding: 8px;
+}
+
+
+
+.produtos {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    column-gap: 1%;
+}
+
+.produtos img {
+    width: 250px;
+    border-radius: 20px;
+}
+
+.produtos h3 {
+    padding: 8px;
+}
+
+.produtos button {
+    background-color: #28a745; 
+    color: #fff; 
+    font-size: 20px; 
+    font-weight: bold;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.produtos button:hover {
+    background-color: #218838; 
+}
+
+.produtos article {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+    .conteudo {
+        display: block;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    aside {
+        padding-left: 0;    
+    }
+
+    .produtos {
+        display: block;
+        justify-content: center;
+    }
+
+    .produtos article {
+        margin-bottom: 30px;
+    }
+
+    .produtos button {
+        font-size: 30px; 
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .conteudo {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .coluna-imagem img {
+        width: 1024px;
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    
+    aside {
+        padding-left: 0px;
+    }
+    
+    .produtos {
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        column-gap: 1%;
+    }
+
+    .produtos article {
+        margin-bottom: 30px;
+    }
+
+}
